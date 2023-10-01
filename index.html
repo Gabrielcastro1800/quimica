@@ -96,6 +96,14 @@
             margin-top: 20px;
             margin-left: 600px;
         }
+        .resposta3{
+            margin-top: -115px;
+            margin-left: 620px;
+        }
+        .resposta4{
+            margin-top: 20px;
+            margin-left: 680px;
+        }
     </style>
 </head>
 <body>
@@ -238,12 +246,16 @@
 
 <p id="escrever Aqui1" class="resposta"></p>
 <p id="escrever Aqui2"class="resposta2"></p>
+<p id="escrever Aqui3" class="resposta3"></p>
+<p id="escrever Aqui4"class="resposta4"></p>
 
 
 
 
     <Script>
+        let key = 1;
        function clickou(letra,tipo,coluna){
+        if(key == 1){
         document.getElementById("escrever Aqui1").innerHTML = letra
         
         if(tipo == "metais"){
@@ -253,17 +265,151 @@
             document.getElementById("escrever Aqui1").classList.add("ametais")
             document.getElementById("escrever Aqui1").classList.remove("metais")
         }
-        document.getElementById("escrever Aqui2").innerHTML=coluna 
+        document.getElementById("escrever Aqui4").innerHTML=coluna 
+        key = 2
+    }else{
+        document.getElementById("escrever Aqui3").innerHTML = letra
         
+        if(tipo == "metais"){
+            document.getElementById("escrever Aqui3").classList.add("metais")
+            document.getElementById("escrever Aqui3").classList.remove("ametais")
+        }else{
+            document.getElementById("escrever Aqui3").classList.add("ametais")
+            document.getElementById("escrever Aqui3").classList.remove("metais")
+        }
+        document.getElementById("escrever Aqui2").innerHTML=coluna 
+        key = 1
+    }
     }
 
       document.getElementById("H").addEventListener('click', function(){
         clickou("H","ametais","1")
       }, false);
-      document.getElementById("Li").addEventListener('click', function(){
-        clickou("Li","metais","1")
+      document.getElementById("Na").addEventListener('click', function(){
+        clickou("Na","metais","1")
       }, false);
+      document.getElementById("K").addEventListener('click', function(){
+        clickou("K","metais","1")
+      }, false);
+      document.getElementById("Rb").addEventListener('click', function(){
+        clickou("Rb","metais","1")
+      }, false);
+      document.getElementById("Cs").addEventListener('click', function(){
+        clickou("Cs","metais","1")
+      }, false);
+      document.getElementById("Fr").addEventListener('click', function(){
+        clickou("Fr","metais","1")
+      }, false);
+      document.getElementById("Be").addEventListener('click', function(){
+        clickou("Be","metais","2")
+      }, false);
+      document.getElementById("Mg").addEventListener('click', function(){
+        clickou("Mg","metais","2")
+      }, false);
+      document.getElementById("Ca").addEventListener('click', function(){
+        clickou("Ca","metais","2")
+      }, false);
+      document.getElementById("Sr").addEventListener('click', function(){
+        clickou("Sr","metais","2")
+      }, false);
+      document.getElementById("Ba").addEventListener('click', function(){
+        clickou("Ba","metais","2")
+      }, false);
+      document.getElementById("Ra").addEventListener('click', function(){
+        clickou("Ra","metais","2")
+      }, false);
+      document.getElementById("B").addEventListener('click', function(){
+        clickou("B","ametais","3")
+      }, false);
+      document.getElementById("Al").addEventListener('click', function(){
+        clickou("Al","metais","3")
+      }, false);
+      document.getElementById("Ga").addEventListener('click', function(){
+        clickou("Ga","metais","3")
+      }, false);
+      document.getElementById("In").addEventListener('click', function(){
+        clickou("In","metais","3")
+      }, false);
+      document.getElementById("Ti").addEventListener('click', function(){
+        clickou("Ti","metais","3")
+      }, false);
+      document.getElementById("Nh").addEventListener('click', function(){
+        clickou("Nh","metais","3")
+      }, false);
+      document.getElementById("C").addEventListener('click', function(){
+        clickou("C","ametais","4")
+      }, false);
+      document.getElementById("Si").addEventListener('click', function(){
+        clickou("Si","ametais","4")
+      }, false);
+      document.getElementById("Ge").addEventListener('click', function(){
+        clickou("Ge","ametais","4")
+      }, false);
+      document.getElementById("sn").addEventListener('click', function(){
+        clickou("sn","metais","4")
+      }, false);
+      document.getElementById("Pb").addEventListener('click', function(){
+        clickou("Pb","metais","4")
+      }, false);
+      document.getElementById("Fl").addEventListener('click', function(){
+        clickou("Fl","metais","4")
+      }, false);
+      document.getElementById("N").addEventListener('click', function(){
+        clickou("N","ametais","3")
+      }, false);
+      document.getElementById("P").addEventListener('click', function(){
+        clickou("P","ametais","3")
+      }, false);
+      document.getElementById("As").addEventListener('click', function(){
+        clickou("As","ametais","3")
+        
+      }, false);
+      document.getElementById("Sb").addEventListener('click', function(){
+        clickou("Sb","ametais","3")
+      }, false);
+      document.getElementById("Bi").addEventListener('click', function(){
+        clickou("Bi","metais","3")
+      }, false);
+      document.getElementById("Mc").addEventListener('click', function(){
+        clickou("Mc","metais","3")
 
+      }, false);
+      document.getElementById("O").addEventListener('click', function(){
+        clickou("O","ametais","2")
+      }, false);
+      document.getElementById("S").addEventListener('click', function(){
+        clickou("S","ametais","2")
+      }, false);
+      document.getElementById("Se").addEventListener('click', function(){
+        clickou("Se","ametais","2")
+      }, false);
+      document.getElementById("Te").addEventListener('click', function(){
+        clickou("Te","ametais","2")
+      }, false);
+      document.getElementById("Po").addEventListener('click', function(){
+        clickou("Po","ametais","2")
+      }, false);
+      document.getElementById("Lv").addEventListener('click', function(){
+        clickou("Lv","metais","2")
+      }, false);
+      document.getElementById("F").addEventListener('click', function(){
+        clickou("F","ametais","1")
+      }, false);
+      document.getElementById("Cl").addEventListener('click', function(){
+        clickou("Cl","ametais","1")
+      }, false);
+      document.getElementById("Br").addEventListener('click', function(){
+        clickou("Br","ametais","1")
+      }, false);
+      document.getElementById("I").addEventListener('click', function(){
+        clickou("I","ametais","1")
+      }, false);
+      document.getElementById("At").addEventListener('click', function(){
+        clickou("At","ametais","1")
+      }, false);
+      document.getElementById("Ts").addEventListener('click', function(){
+        clickou("Ts","metais","1")
+      }, false);
  </Script>
 </body>
 </html>
