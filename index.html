@@ -104,6 +104,9 @@
             margin-top: 20px;
             margin-left: 680px;
         }
+        .parered{
+          background-color: red; padding: 15px;
+        }
     </style>
 </head>
 <body>
@@ -248,6 +251,7 @@
 <p id="escrever Aqui2"class="resposta2"></p>
 <p id="escrever Aqui3" class="resposta3"></p>
 <p id="escrever Aqui4"class="resposta4"></p>
+<p id="pare"></p>
 
 
 
@@ -257,6 +261,8 @@
        function clickou(letra,tipo,coluna){
         if(key == 1){
         document.getElementById("escrever Aqui1").innerHTML = letra
+        document.getElementById("pare").classList.remove("parered")
+        document.getElementById("pare").innerHTML = ""
         
         if(tipo == "metais"){
             document.getElementById("escrever Aqui1").classList.add("metais")
@@ -268,6 +274,18 @@
         document.getElementById("escrever Aqui4").innerHTML=coluna 
         key = 2
     }else{
+      if(document.getElementById("escrever Aqui4").innerHTML == "1" || document.getElementById("escrever Aqui4").innerHTML == "2"){
+        if(coluna == "1" || coluna == "2"){
+          if(document.getElementById("escrever Aqui4").innerHTML == coluna){
+            document.getElementById("pare").innerHTML = ""
+          }else{
+            document.getElementById("pare").innerHTML = "Não se ligam pois são dois cations!"
+            document.getElementById("pare").classList.add("parered")
+          }
+        }
+      }else{
+        
+      }
         document.getElementById("escrever Aqui3").innerHTML = letra
         
         if(tipo == "metais"){
@@ -284,6 +302,9 @@
 
       document.getElementById("H").addEventListener('click', function(){
         clickou("H","ametais","1")
+      }, false);
+      document.getElementById("Li").addEventListener('click', function(){
+        clickou("li","metais","1")
       }, false);
       document.getElementById("Na").addEventListener('click', function(){
         clickou("Na","metais","1")
